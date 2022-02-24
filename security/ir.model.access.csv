@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_qis_airline_id,Access for QIS Ariline,model_qis_airline,base.group_system,1,1,1,1
+access_qis_airline_other_user_id,Access for Sales user QIS Ariline,model_qis_airline,sales_team.group_sale_salesman_all_leads,1,0,0,0
+access_qis_booking_id,Access for QIS Booking,model_qis_booking,,1,1,1,1
+access_qis_pilot_id,Access for QIS Pilot,model_qis_pilot,,1,1,1,1
+access_qis_airport_id,Access for QIS airport,model_qis_airport,,1,1,1,1
+
+
+
+
+
+
+
+
+

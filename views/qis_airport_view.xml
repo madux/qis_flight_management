@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Form view starts here  -->
+        <record id="qis_airport_form_view" model="ir.ui.view">
+            <field name="name">QIS Airport Form View</field>
+            <field name="model">qis.airport</field>
+            <field name="arch" type="xml">
+                <form string="Airport">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="location"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Form view end here  -->
+
+        <!-- Tree view starts here  -->
+        <record id="qis_airport_tree_view" model="ir.ui.view">
+            <field name="name">QIS Airport Tree View</field>
+            <field name="model">qis.airport</field>
+            <field name="arch" type="xml">
+                <tree string="Airport">
+                    <field name="name"/>
+                    <field name="location"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search view starts here  -->
+        <record id="qis_airport_search_view" model="ir.ui.view">
+            <field name="name">QIS airport Search View</field>
+            <field name="model">qis.airport</field>
+            <field name="arch" type="xml">
+                <search string="Airport">
+                    <field name="name"/>
+                    <field name="location"/>
+                    <field name="country_id"/>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="qis_airport_main_menu" name="Airport" sequence="2"
+        parent="qis_flight_management.qis_flight_management_main_menu"/>
+        
+    <data>
+<odoo>

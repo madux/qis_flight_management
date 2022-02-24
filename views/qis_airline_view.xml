@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Form view starts here  -->
+        <record id="qis_airline_form_view" model="ir.ui.view">
+            <field name="name">QIS airline Form View</field>
+            <field name="model">qis.airline</field>
+            <field name="arch" type="xml">
+                <form string="Airline">
+                    <group>
+                        <!-- left side -->
+                        <group>
+                            <field name="name"/>
+                            <field name="model"/>
+                        </group>
+                        <!-- right side -->
+
+                        <group>
+                            <field name="last_maintenance_date"/>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Form view end here  -->
+
+        <!-- Tree view starts here  -->
+        <record id="qis_airline_tree_view" model="ir.ui.view">
+            <field name="name">QIS airline Tree View</field>
+            <field name="model">qis.airline</field>
+            <field name="arch" type="xml">
+                <tree string="Airline">
+                    <field name="name"/>
+                    <field name="model"/>
+                    <field name="last_maintenance_date"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search view starts here  -->
+        <record id="qis_airline_search_view" model="ir.ui.view">
+            <field name="name">QIS airline Search View</field>
+            <field name="model">qis.airline</field>
+            <field name="arch" type="xml">
+                <search string="Airline">
+                    <field name="name"/>
+                    <field name="model"/>
+                    <field name="last_maintenance_date"/>
+                    <field name="company_id"/>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="qis_flight_management_main_menu" name="QIS Flight"
+            sequence="4" groups="sales_team.group_sale_salesman_all_leads,base.group_system"/>
+            <menuitem id="qis_airline_main_menu" name="Airline"
+                sequence="1" groups="base.group_system" parent="qis_flight_management.qis_flight_management_main_menu"/>
+
+
+    <data>
+<odoo>

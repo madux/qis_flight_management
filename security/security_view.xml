@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="module_qis_flight_category" model="ir.module.category">
+            <field name="name">Qis Flight category</field>
+            <field name="description">DG category</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_flight_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="qis_flight_management.module_qis_flight_category"/>
+        </record>
+
+        <record id="group_flight_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="qis_flight_management.module_qis_flight_category"/>
+        </record> 
+    </data>
+ 
+    </data>
+</odoo>
