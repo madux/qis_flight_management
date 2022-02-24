@@ -18,6 +18,4 @@
             <field name="category_id" ref="qis_flight_management.module_qis_flight_category"/>
         </record> 
     </data>
- 
-    </data>
 </odoo>

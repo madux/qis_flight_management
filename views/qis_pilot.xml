@@ -8,15 +8,17 @@
             <field name="arch" type="xml">
                 <form string="pilot">
                     <div class="oe_title"><br/>
-                        <h1><field name="name" placeholder="Name..." required="1"/></h1>
+                        <h1><field name="pilot_name" required="1"/></h1>
                     </div>
                     <group>
                         <group>
+                            <field name="airline_name" placeholder="e.g Qatar Airways..." required="1"/>
                             <field name="company_id" required="1"/>
                         </group>
                         <group>
                             <field name="graduation_date" required="1"/>
                         </group>
+                    </group>
                 </form>
             </field>
         </record>
@@ -28,7 +30,7 @@
             <field name="model">qis.pilot</field>
             <field name="arch" type="xml">
                 <tree string="pilot">
-                    <field name="name"/>
+                    <field name="pilot_name"/>
                     <field name="company_id"/>
                     <field name="graduation_date"/>
                 </tree>
@@ -41,14 +43,30 @@
             <field name="model">qis.pilot</field>
             <field name="arch" type="xml">
                 <search string="pilot">
-                    <field name="name" required="1"/>
+                    <field name="pilot_name" required="1"/>
                     <field name="company_id" required="1"/>
                     <field name="graduation_date" required="1"/>
                 </search>
             </field>
         </record>
 
-        <menuitem id="qis_pilot_main_menu" name="Pilot" sequence="3" parent="qis_flight_management.qis_flight_management_main_menu"/>
+        <record id="qis_pilot_action_id" model="ir.actions.act_window">
+            <field name="name">QIS pilot</field>
+            <field name="res_model">qis.pilot</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new record
+            </p><p>
+                 .
+            </p><p>
+                .
+            </p>
+            </field>
+        </record>
+
+        <menuitem id="qis_pilot_main_menu" name="Pilot" sequence="3" parent="qis_flight_management.qis_flight_management_main_menu"
+        action="qis_flight_management.qis_pilot_action_id"/>
         
-    <data>
-<odoo>
+    </data>
+</odoo>

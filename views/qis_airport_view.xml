@@ -47,8 +47,23 @@
             </field>
         </record>
 
+        <record id="qis_airport_action_id" model="ir.actions.act_window">
+            <field name="name">QIS airport</field>
+            <field name="res_model">qis.airport</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new record
+            </p><p>
+                 .
+            </p><p>
+                .
+            </p>
+            </field>
+        </record>
+
         <menuitem id="qis_airport_main_menu" name="Airport" sequence="2"
-        parent="qis_flight_management.qis_flight_management_main_menu"/>
+        parent="qis_flight_management.qis_flight_management_main_menu" action="qis_flight_management.qis_airport_action_id" groups="qis_flight_management.group_flight_user,qis_flight_management.group_flight_manager"/>
         
-    <data>
-<odoo>
+    </data>
+</odoo>

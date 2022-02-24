@@ -7,7 +7,11 @@
     'depends': ['base', 'contacts'
     ],
     'data': [
-        'views/qis_airline_view.xml', 'views/qis_passengers_view.xml','views/qis_airport_view.xml','views/qis_pilot_view.xml',],
+        'security/security_view.xml',
+        'security/ir.model.access.csv',
+        'views/qis_airline_view.xml',
+        'views/qis_airport_view.xml',
+        'views/qis_pilot.xml',],
     "active": False,
     'application': True,
     "sequence": 10
