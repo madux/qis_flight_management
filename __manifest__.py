@@ -11,6 +11,7 @@
         'security/security_view.xml',
         'security/ir.model.access.csv',
         'views/qis_airline_view.xml',
+        'views/booking_view.xml',
         'views/qis_airport_view.xml',
         'views/qis_pilot.xml',],
     "active": False,

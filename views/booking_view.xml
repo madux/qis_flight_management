@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Form view starts here  -->
+        <record id="qis_booking_form_view" model="ir.ui.view">
+            <field name="name">QIS booking Form View</field>
+            <field name="model">qis.booking</field>
+            <field name="arch" type="xml">
+                
+                <form string="booking">
+                    <header> 
+                        <button name="button_set_progress" string="Set to progress" type="object" class="oe_highlight" attrs="{'invisible': [('status', '!=', 'draft')]}" confirm="Are you sure you want to confirm"/>
+                        <button name="button_done" string="Complete" type="object" class="oe_highlight" attrs="{'invisible': [('status', '!=', 'progress')]}"/>
+                        <button name="button_cancel" string="Cancel" type="object" class="oe_highlight" attrs="{'invisible': [('status', '!=', 'progress')]}"/>
+                        <field name="status" widget="statusbar" readonly="1" options="{'clickable': '0'}"/>
+                    </header>
+                    <div class="oe_title"><br/>
+                        <h1><field name="ticket_num" required="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="number_of_persons" placeholder="e.g 2" required="1"/>
+                            <field name="product_id" required="1"/>
+                        </group>
+                        <group>
+                            <field name="amount" required="1"/>
+                            <field name="discount" required="1"/>
+                            <field name="start_date" required="1"/>
+                            <field name="end_date" required="1"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- Form view end here  -->
+
+        <!-- Tree view starts here  -->
+        <record id="qis_booking_tree_view" model="ir.ui.view">
+            <field name="name">QIS booking Tree View</field>
+            <field name="model">qis.booking</field>
+            <field name="arch" type="xml">
+                <tree string="booking">
+                    <field name="ticket_num" required="1"/>
+                    <field name="number_of_persons" placeholder="e.g 2" required="1"/>
+                    <field name="product_id" required="1"/>
+                    <field name="amount" required="1"/>
+                    <field name="discount" required="1"/>
+                    <field name="start_date" required="1"/>
+                    <field name="end_date" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search view starts here  -->
+        <record id="qis_booking_search_view" model="ir.ui.view">
+            <field name="name">QIS booking Search View</field>
+            <field name="model">qis.booking</field>
+            <field name="arch" type="xml">
+                <search string="booking">
+                    <field name="ticket_num" required="1"/>
+                    <field name="number_of_persons" placeholder="e.g 2" required="1"/>
+                    <field name="product_id" required="1"/>
+                    <field name="amount" required="1"/>
+                    <field name="start_date" required="1"/>
+                    <field name="end_date" required="1"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="qis_booking_action_id" model="ir.actions.act_window">
+            <field name="name">QIS booking</field>
+            <field name="res_model">qis.booking</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create new record
+            </p><p>
+                 .
+            </p><p>
+                .
+            </p>
+            </field>
+        </record>
+
+        <menuitem id="qis_booking_main_menu" name="Bookings" sequence="4" parent="qis_flight_management.qis_flight_management_main_menu"
+        action="qis_flight_management.qis_booking_action_id"/>
+        
+    </data>
+</odoo>

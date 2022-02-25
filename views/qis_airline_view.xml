@@ -72,7 +72,5 @@
             <menuitem id="qis_airline_main_menu" name="Airline"
                 sequence="1" parent="qis_flight_management.qis_flight_management_main_menu"
                 action="qis_flight_management.qis_airline_action_id"/>
-
-
     </data>
 </odoo>

@@ -4,7 +4,7 @@
 
         <record id="module_qis_flight_category" model="ir.module.category">
             <field name="name">Qis Flight category</field>
-            <field name="description">DG category</field>
+            <field name="description">Flight category</field>
             <field name="sequence">10</field>
         </record>
 
