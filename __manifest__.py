@@ -6,6 +6,7 @@
     'version': '1.0.1',
     'depends': ['base', 'contacts'
     ],
+    'category': '', # sales, hr
     'data': [
         'security/security_view.xml',
         'security/ir.model.access.csv',
