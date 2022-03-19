@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_booking_addons" model="ir.ui.view">
+            <field name="name">qis.booking</field>
+            <field name="model">qis.booking</field>
+            <field name="inherit_id" ref="qis_flight_management.qis_booking_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='number_of_persons']" position="before">
+                        <field name="partner_id"/>
+                        <field name="airline_id"/>
+                    </xpath>
+                    <xpath expr="//field[@name='end_date']" position="replace">
+                        <field name="end_date"/>
+                        
+                    </xpath>
+       
+                </data>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
