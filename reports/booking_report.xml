@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="action_report_qis_booking" model="ir.actions.report">
+            <field name="name">Booking Report</field>
+            <field name="model">qis.booking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">qis_flight_management_addons.booking_report</field>
+            <field name="report_file">qis_flight_management_addons.booking_report</field>
+            <field name="binding_model_id" ref="model_qis_booking"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="booking_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="a">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="row text-center">
+                                <div class="o_offer col-lg-12">
+                                    <h4> Booking Order for: <span t-field="a.partner_id.name"/></h4>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12" style="font-size: 12px;">		
+								<table class="table table-condensed"> 
+									<t>
+										<thead>
+											<tr>
+												<th><strong>TICKET NUMBER</strong></th>
+												<th><strong>AIRLINE</strong></th>
+                                                <th><strong>PRODUCT</strong></th>
+                                                <th><strong>NUMBER OF PERSON</strong></th>
+												<th><strong>DATE</strong></th>
+                                                <th><strong>AMOUNT</strong></th>
+											</tr>
+										</thead>
+										<t>
+                                            <t>
+                                                <tbody>
+                                                    <tr>
+                                                        <td> <span t-esc="a.ticket_num"/></td>
+                                                        <td> <span t-esc="a.airline_id.name"/></td>
+                                                        <td> <span t-esc="a.product_id.name"/></td>
+                                                        <td> <span t-esc="a.number_of_persons" /></td>
+                                                        <td> <span t-esc="a.start_date" /></td>
+                                                        <td> <span t-esc="a.amount" /></td>
+                                                        
+                                                    </tr>
+                                                </tbody>
+										    </t>
+										</t>
+									</t>
+								</table>								
+							</div>
+                            <h6>
+
+                                Notice: All timings are local and for more information please visit us on www.qisolutions.co.za or call 234 (0) 1279 9999.
+
+                                Please check with departure airport for restrictions on the carriage of liquids, aerosols and gels in hand baggage.
+
+                            </h6>
+
+
+                        </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    </t>
+                    
+                </t>
+            </t>
+        </template>
+
+        
+    
+    </data>
+    
+
+</odoo>

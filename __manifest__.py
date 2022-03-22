@@ -8,7 +8,11 @@
     ],
     'category': '', # sales, hr
     'data': [
-        'views/booking_view_addon.xml',],
+        'views/booking_view_addon.xml',
+        'reports/booking_report.xml',
+        
+        
+        ],
         
     "active": False,
     'application': True,
